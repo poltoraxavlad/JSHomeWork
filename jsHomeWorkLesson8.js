@@ -67,7 +67,7 @@ function areArraySame (firstArray, secondArray){
 
 }
 areArraySame([1, 2, 3], [1, 2, 3]);
-//areArraySame([1, 2, 3], [1, 2, 3]);
+//areArraySame([1, 5, 6], [1, 5, 4]);
 
 
 
