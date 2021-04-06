@@ -31,4 +31,4 @@ for (var i = 0; i < friends.length; i++) {
         .fadeIn(2000);
 }
 
-$("p").append(" the best!");
+$("p").append(" the best");
