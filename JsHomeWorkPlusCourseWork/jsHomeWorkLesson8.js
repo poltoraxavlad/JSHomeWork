@@ -46,8 +46,6 @@ function multiply(a, b){
 function add(c){
     return c;
 }
-
-
 console.log(multiply(36325, 9824) + add(777));
 
 //Try it out:
