@@ -24,7 +24,7 @@ let Car = function (x, y) {
     this.y = y;
 };
 Car.prototype.draw = function () {
-    var carHtml = '<img src="../Kuznetsov.png">';
+    let carHtml = '<img alt="Undefined" src="Kuznetsov.png">';
 
     this.carElement = $(carHtml);
     this.carElement.css({
