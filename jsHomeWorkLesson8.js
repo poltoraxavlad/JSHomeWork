@@ -6,7 +6,7 @@ sayHelloTo("nik");
 
 //Try it out:
 let drawCats = function (HowManyTimes){
-    for (i = 0; i<HowManyTimes; i++){
+    for (let i = 0; i<HowManyTimes; i++){
         console.log(i + " =^.^=")
     }
 }
@@ -14,7 +14,7 @@ drawCats(100);
 
 //Try it out:
 let printMultipleTimes = function (howManyTimes, whatToDraw){
-    for (i = 0; i < howManyTimes; i++){
+    for (let i = 0; i < howManyTimes; i++){
         console.log(i+ "" + whatToDraw);
     }
 };
@@ -39,6 +39,7 @@ let randomAdjectives = ["вонючая", "унылая", "дурацкая"];
 let randomWords = ["муха", "выдра", "дубина", "мартышка", "крыса"];
 let randomString = "У тебя " + pickRandomWord(randomBodyParts) + " словно " + pickRandomWord(randomAdjectives) + " " + pickRandomWord(randomWords) + "!!!"; randomString;
 console.log(randomString)
+
 //Try it out:
 function multiply(a, b){
     return a * b;
@@ -53,7 +54,7 @@ function areArraySame (firstArray, secondArray){
     if (firstArray.length !== secondArray.length) {
         return false
         }else{
-            for (i = 0; i < firstArray.length;){
+            for (let i = 0; i < firstArray.length;){
                 if (firstArray[i] === secondArray[i]) {
                     i++;
                 }else {
