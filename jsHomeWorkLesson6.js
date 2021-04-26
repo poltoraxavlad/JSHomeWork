@@ -46,7 +46,7 @@ while (y < 10000){
 
 //Try it out
 let animals = ["Кот","Лемур","Лев","Варан"];
-for (i=0; i < animals.length; ){
+for (let i=0; i < animals.length; ){
     animals[i] = animals[i] + "- прекрасное животное";
     i++;
 }
