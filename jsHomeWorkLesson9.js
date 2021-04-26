@@ -1,7 +1,7 @@
 //Try it out:
 const friends = ["Bill", "Fredy", "Alcapone"];
 
-for (var i = 0; i < friends.length; i++) {
+for (let i = 0; i < friends.length; i++) {
     $("body").append("<p>" + friends[i] + "</p>");
     $("p")
         .last()
@@ -13,7 +13,7 @@ $("p").append(" the best");
 
 //Try it out 2:
 let fadeTime;
-for (var i = 0; i < 5; i++) {
+for (let i = 0; i < 5; i++) {
     fadeTime = (i + 1) * 1000;
     $("#main-heading")
         .fadeOut(fadeTime / 2)
@@ -23,7 +23,7 @@ for (var i = 0; i < 5; i++) {
 //Try it out 3:
 const friends = ["Nick", "Habib", "Stas"];
 
-for (var i = 0; i < friends.length; i++) {
+for (let i = 0; i < friends.length; i++) {
     $("body").append("<p>" + friends[i] + "</p>");
     $("p")
         .last()
