@@ -30,7 +30,6 @@ arrow("Kuznetsov")
 
 //Try it out 1:
 $("html").click(function (event) {
-    // добавили обработчик события mousemove
     $("#heading").offset({
         left: event.pageX,
         top: event.pageY,
