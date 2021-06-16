@@ -22,6 +22,6 @@ describe('Registration on test funnel', function (){
 
     it('Assert element', async function (){
         await FunnelPage.clickPopUpButton();
-        expect(await !FunnelPage.popIsDisplayed()).toBe(false);
+        expect(!FunnelPage.popIsDisplayed()).toBe(false);
     });
 });

@@ -54,7 +54,7 @@ const FunnelPage = function () {
     this.clickPopUpButton = async function() {
         expect(await expectedConditionsHelper.waitElementToBeClickable(popUpButton));
         await popUpButton.click();
-    }
+    };
 };
 
 module.exports = new FunnelPage();
