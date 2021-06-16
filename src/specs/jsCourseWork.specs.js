@@ -1,27 +1,27 @@
 const userData = require('../resources/test_data/userData');
-const registrationHelper = require('../helper/registrationHelper/registerStepsHelper');
 const constants = require('../resources/constants');
-const button = element(by.id("lead-form-submit"));
-const popUp = element(by.xpath('//div[@class="nrp__t1"]'));
+const FunnelPage = require('../resources/pages/funnelPage');
 
 const randomEmail = userData.getRandomEmail();
-const funnelURL = constants.url.funnelURL;
 
 describe('Registration on test funnel', function (){
     it('Open test page', async function () {
-        await browser.get(funnelURL)
-        expect(await button.isPresent()).toBe(true);
+        await FunnelPage.get();
+        expect(await browser.getTitle()).toEqual(constants.funnelData.pageTitle);
     });
 
     it('Create lead', async function () {
-        await registrationHelper.registerDataForOneStepFunnelWithoutPassword(randomEmail);
+        await FunnelPage.inputFirstNameField(constants.userData.firstName);
+        await FunnelPage.inputLastNameField(constants.userData.lastName);
+        await FunnelPage.inputMobilePhoneField(constants.userData.mobilePhone);
+        await FunnelPage.inputMailField(randomEmail);
+        await FunnelPage.clickSubmitButton();
+        expect(await FunnelPage.popIsDisplayed());
+        expect(await FunnelPage.getPopUpText()).toEqual(constants.textPopup.TYPOP_UP);
     });
 
     it('Assert element', async function (){
-        browser.wait( await popUp.isDisplayed);
-        expect(await popUp.isPresent()).toBe(true);
-        expect(await popUp.getText()).toEqual(constants.textPopup.TYPOP_UP);
-
-        await browser.manage().deleteAllCookies();
+        await FunnelPage.clickPopUpButton();
+        expect(await !FunnelPage.popIsDisplayed()).toBe(false);
     });
 });

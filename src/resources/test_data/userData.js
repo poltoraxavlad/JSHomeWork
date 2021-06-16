@@ -9,7 +9,7 @@ const getdataForEmail = function getCurrentTime() {
 };
 
 let getRandomEmail = function () {
-    return `nfs_e2e_ui${getdataForEmail()}@mailinator.com`;
+    return `test${getdataForEmail()}@mailinator.com`;
 };
 
 let getRandomPhoneNumber = function (phoneId) {

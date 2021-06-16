@@ -9,21 +9,22 @@ const textPopup = {
 };
 
 const userData = {
-    fullName: "test test",
-    firstNameFiled: "test",
-    lastNameField: "test",
-    writeMobilePhone: "505050505",
-    writePassword: "Pikachu1995",
-    country: "Saudi Arabia",
-    countryPrefix: "+966"
+    firstName: "test",
+    lastName: "test",
+    mobilePhone: "505050505",
 };
 
 const url = {
     funnelURL: "https://promo7.floralital-marketing.com/funnel_qa_course_work/"
 };
 
+const funnelData = {
+    pageTitle: "Floralital Marketing"
+};
+
 module.exports = {
     textPopup,
     userData,
-    url
+    url,
+    funnelData
 };
