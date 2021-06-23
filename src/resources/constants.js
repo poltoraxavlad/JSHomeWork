@@ -1,10 +1,5 @@
 /** Pages title*/
 const textPopup = {
-    SAVE: "The changes were successfully saved",
-    DELETE: "DELETED",
-    UNDO: "UNDO",
-    ADDED: "ADDED",
-    DOMAIN_UPDATED: "Domain is updated!",
     TYPOP_UP: "¡Gracias por registrarse!"
 };
 

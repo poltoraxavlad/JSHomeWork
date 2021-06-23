@@ -1,5 +1,3 @@
-const config = require('../config');
-
 const getdataForEmail = function getCurrentTime() {
     let mounth = new Date().getUTCMonth() + 1;
     const Data = new Date();
@@ -12,11 +10,6 @@ let getRandomEmail = function () {
     return `test${getdataForEmail()}@mailinator.com`;
 };
 
-let getRandomPhoneNumber = function (phoneId) {
-    return `${phoneId}${Math.floor(Math.random() * (Math.floor(999999) - Math.ceil(100000))) + Math.ceil(100000)}`;
-};
-
 module.exports = {
     getRandomEmail,
-    getRandomPhoneNumber
 };
