@@ -17,42 +17,42 @@ const FunnelPage = function () {
     };
 
     this.inputFirstNameField = async function (firstName) {
-        expect(await expectedConditionsHelper.waitElementPresent(firstNameField));
+        await expectedConditionsHelper.waitElementPresent(firstNameField);
         await firstNameField.sendKeys(firstName);
     };
 
     this.inputLastNameField = async function (lastName) {
-        expect(await expectedConditionsHelper.waitElementPresent(lastNameField));
+        await expectedConditionsHelper.waitElementPresent(lastNameField);
         await lastNameField.sendKeys(lastName);
     };
 
     this.inputMobilePhoneField = async function (mobilePhone) {
-        expect(await expectedConditionsHelper.waitElementToBeClickable(mobilePhoneField));
+        await expectedConditionsHelper.waitElementToBeClickable(mobilePhoneField);
         await mobilePhoneField.sendKeys(mobilePhone);
     };
 
     this.inputMailField = async function (randomEmail) {
-        expect(await expectedConditionsHelper.waitElementPresent(mailField));
+        await expectedConditionsHelper.waitElementPresent(mailField);
         await mailField.sendKeys(randomEmail);
     };
 
     this.clickSubmitButton = async function () {
-        expect(await expectedConditionsHelper.waitElementToBeClickable(submitButton));
+        await expectedConditionsHelper.waitElementToBeClickable(submitButton);
         await submitButton.click();
     };
 
     this.popIsDisplayed = async function () {
-        expect(await expectedConditionsHelper.waitElementPresent(popUp));
+        await expectedConditionsHelper.waitElementPresent(popUp);
         return popUp.isPresent();
     };
 
     this.getPopUpText = async function () {
-        expect(await expectedConditionsHelper.waitElementToBeClickable(popUp));
+        await expectedConditionsHelper.waitElementToBeClickable(popUp);
         return popUpText.getText();
         };
 
     this.clickPopUpButton = async function() {
-        expect(await expectedConditionsHelper.waitElementToBeClickable(popUpButton));
+        await expectedConditionsHelper.waitElementToBeClickable(popUpButton);
         await popUpButton.click();
     };
 };
