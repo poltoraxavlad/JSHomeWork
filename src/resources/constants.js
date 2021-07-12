@@ -10,7 +10,7 @@ const userData = {
 };
 
 const url = {
-    funnelURL: "https://promo7.floralital-marketing.com/funnel_qa_course_work/"
+    funnelURL: "https://promo7.floralital-marketing.com/funnel_qa_course_work_fm"
 };
 
 const funnelData = {
