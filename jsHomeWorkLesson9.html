@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Володя</title>
+</head>
+<body>
+<h1 id="main-heading">Привет, ВОЛОДЯ!</h1>
+<p>Вот так вот Вовчик, горобчик</p>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+    //Try it out:
+    let headingElement = document.getElementById("main-heading");
+    console.log(headingElement.innerHTML);
+    let newHeadingText = prompt("Кто по масти?");
+    $("#main-heading").text(newHeadingText);
+    $("body").append("<p>Так и живем</p>");
+    for (let i = 0; i < 3; i++) {
+        let hobby = prompt("Назовите одно из своих хобби?");
+        $("body").append("<p>" + hobby + "</p>");
+    }
+    // $("h1").fadeOut(1000).fadeIn(1000);
+    // $("p").fadein(1000);
+    // $("h1").text("Пока, через пару секунд").fadeOut(3000);
+    // $("h1").slideUp(3000).slideDown(3000);
+    // for (let k = 0; k<5; k++) {
+    //     $("p").slidUp(1000).slidDown(1000);
+    // }
+    // $("p").hide(3000).show(2000).hide(2000).show(2000).slideUp(3000).slideDown(3000);
+    $("h1").text("This text will be fade soon").fadeOut(3000).show(2000).text("This text will be fade soon").hide(3000)
+        .text("This text will be fade soon").show(2000).slideUp(3000).slideDown(3000);
+</script>
+</body>
+</html>
