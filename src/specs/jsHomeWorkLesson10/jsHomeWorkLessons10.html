@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Володя</title>
+</head>
+<body>
+<h1 id="main-heading">Привет, ВОЛОДЯ!</h1>
+<p>Вот так вот Вовчик, горобчик</p>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+    // let timeUp = function () {
+    //     alert("Time is Up!");
+    // }
+    //
+    // setTimeout(timeOut, 3000);
+    //
+    // let doHomeWorkAlarm = function () {
+    //     alert("Time to do home work");
+    // }
+    //
+    // let timeoutId = setTimeout (doHomeWorkAlarm, 1000);
+    //==================================================================================================================
+    // let counter = 5;
+    // let printMessage = function () {
+    //     console.log("You are looking " + counter + " sec");
+    //     counter += 5;
+    // }
+    //
+    // let intervalId = setInterval(printMessage, 5000);
+    //==================================================================================================================
+    // let leftOffset = 0;
+    // let topOffset = 0;
+    // let moveHeading = function () {
+    //     $("#main-heading").offset({left: leftOffset, top: topOffset});
+    //     if (leftOffset < 200 && topOffset == 0){
+    //         leftOffset++;
+    //     } else if (leftOffset == 200 && topOffset < 200){
+    //         topOffset++;
+    //     } else if (leftOffset < 201 && leftOffset > 0 && topOffset == 200){
+    //         leftOffset--;
+    //     } else topOffset--;
+    // }
+    // setInterval(moveHeading, 15);
+    //==================================================================================================================
+    // let leftOffset = 0;
+    // let topOffset = 0;
+    // let moveHeading = function () {
+    //     $("#main-heading").offset({left: leftOffset, top: topOffset});
+    //     if (leftOffset < 200 && topOffset == 0){
+    //         leftOffset++;
+    //     } else if (leftOffset == 200 && topOffset < 200){
+    //         topOffset++;
+    //     } else if (leftOffset < 201 && leftOffset > 0 && topOffset == 200){
+    //         leftOffset--;
+    //     } else topOffset--;
+    // }
+    // let stopAnimation = function () {
+    //     clearInterval(intervalId);
+    // }
+    // $("h1").click(stopAnimation);
+    // let intervalId = setInterval(moveHeading, 30);
+    //==================================================================================================================
+    let leftOffset = 0;
+    let topOffset = 0;
+    let speed = 100;
+    let speedStep = 10;
+    let counter = speed / speedStep;
+    let congratsText = "Молодець!";
+
+    let moveHeading = function () {
+        $("#main-heading").offset({left: leftOffset, top: topOffset});
+        if (leftOffset < 200 && topOffset === 0) {
+            leftOffset++;
+        } else if (leftOffset === 200 && topOffset < 200) {
+            topOffset++;
+        } else if (leftOffset < 201 && leftOffset > 0 && topOffset === 200) {
+            leftOffset--;
+        } else topOffset--;
+    }
+
+    let intervalId = setInterval(moveHeading, speed);
+
+    let quickerAnimation = function () {
+        clearInterval(intervalId);
+        console.log(speed, "local");
+        intervalId = setInterval(moveHeading, speed = speed - speedStep);
+        counter = counter - 1;
+        let stepText = "Клікай по заголовку " + counter + " раз";
+        $("h1").text(stepText);
+        if (counter <= 0) {
+            $("h1").text(congratsText);
+            clearInterval(intervalId);
+        }
+    };
+
+    $("h1").click(quickerAnimation);
+    console.log(speed, "global");
+</script>
+</body>
+</html>

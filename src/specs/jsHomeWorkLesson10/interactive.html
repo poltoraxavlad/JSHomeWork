@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Володя</title>
+</head>
+<body>
+<h1 id="main-heading">Привет, ВОЛОДЯ!</h1>
+<p>Вот так вот Вовчик, горобчик</p>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+    let leftOffset = 0;
+    let moveHeading = function () {
+        $("#main-heading").offset({left: leftOffset});
+        leftOffset++;
+        if (leftOffset > 200) {
+            leftOffset = 0;
+        }
+    };
+    setInterval(moveHeading, 30);
+</script>
+</body>
+</html>
