@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Володя</title>
+</head>
+<body>
+<h1 id="main-heading">Привет, ВОЛОДЯ!</h1>
+<p>Вот так вот Вовчик, горобчик</p>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+    //Try it out:
+    const friends = ["Bill", "Fredy", "Alcapone"];
+
+    for (let i = 0; i < friends.length; i++) {
+        $("body").append("<p>" + friends[i] + "</p>");
+        $("p")
+            .last()
+            .hide()
+            .fadeIn((i + 1) * 2000);
+    }
+
+    $("p").append(" the best");
+
+    //Try it out 2:
+    let fadeTime;
+
+    for (let i = 0; i < 5; i++) {
+        fadeTime = (i + 1) * 1000;
+        $("#main-heading")
+            .fadeOut(fadeTime / 2)
+            .fadeIn(fadeTime / 2);
+    }
+
+    //Try it out 3:
+    const newfriends = ["Nick", "Habib", "Stas"];
+
+    for (let i = 0; i < newfriends.length; i++) {
+        $("body").append("<p>" + friends[i] + "</p>");
+        $("p")
+            .last()
+            .hide().delay((i + 1) * 2500)
+            .fadeIn(2000);
+    }
+
+    $("p").append(" the best");
+</script>
+</body>
+</html>
