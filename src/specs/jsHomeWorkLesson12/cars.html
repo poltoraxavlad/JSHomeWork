@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Гонки</title></head>
+<body>
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script>
+    let Car = function (x, y) {
+        this.x = x;
+        this.y = y;
+    };
+
+    let drawCar = function (car) {
+        let dimaPhoto = '<img src="../../../Kuznetsov.png">';
+
+        let carElement = $(dimaPhoto);
+
+        carElement.css({
+            position: "absolute",
+            left: car.x,
+            top: car.y
+        });
+
+        $("body").append(carElement);
+    };
+
+    let dima = new Car(20, 20);
+    let dima1 = new Car(100, 200);
+    drawCar(dima);
+    drawCar(dima1);
+</script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Гонки</title> </head>
+    <title>Гонки</title></head>
 <body>
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script>
@@ -12,9 +12,9 @@
     };
 
     Car.prototype.draw = function () {
-        let carHtml = '<img src="Kuznetsov.png">';
+        let dimaPhoto = '<img src="../../../Kuznetsov.png">';
 
-        this.carElement = $(carHtml);
+        this.carElement = $(dimaPhoto);
         this.carElement.css({
             position: "absolute",
             left: this.x,
@@ -25,7 +25,7 @@
     };
 
     Car.prototype.moveRight = function () {
-            this.x += 5;
+        this.x += 5;
         this.carElement.css({
             left: this.x,
             top: this.y
@@ -58,12 +58,18 @@
     // };
 
     let tesla = new Car(20, 20);
-    let nissan = new Car(20, 200);
-    setInterval(function (){
+    let nissan = new Car(50, 200);
+    tesla.draw();
+    nissan.draw();
+    // tesla.moveRight();
+    // tesla.moveRight();
+    // tesla.moveRight();
+
+    setInterval(function () {
         tesla.draw();
         tesla.moveRight(Math.random() * 4)
     }, 50)
-    setInterval(function (){
+    setInterval(function () {
         nissan.draw();
         nissan.moveRight(Math.random() * 9)
     }, 70)
