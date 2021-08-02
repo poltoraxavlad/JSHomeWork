@@ -5,12 +5,15 @@
     <title>Володя</title>
 </head>
 <body>
-<h1 id="main-heading">Привет, ВОЛОДЯ!</h1>
+<h1 id="heading">Привет, ВОЛОДЯ!</h1>
 <p>Вот так вот Вовчик, горобчик</p>
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script>
-    $("html").onmousemove(function (event) {
-        $("#main-heading").offset({left: event.pageX, top: event.pageY});
+    $("html").mousemove(function (event) {
+        $("#heading").offset({
+            left: event.pageX,
+            top: event.pageY
+        });
     });
 </script>
 </body>

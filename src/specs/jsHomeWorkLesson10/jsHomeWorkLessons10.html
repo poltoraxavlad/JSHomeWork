@@ -5,62 +5,39 @@
     <title>Володя</title>
 </head>
 <body>
-<h1 id="main-heading">Привет, ВОЛОДЯ!</h1>
+<h1 id="heading">Привет, ВОЛОДЯ!</h1>
 <p>Вот так вот Вовчик, горобчик</p>
 <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
 <script>
-    // let timeUp = function () {
-    //     alert("Time is Up!");
-    // }
-    //
-    // setTimeout(timeOut, 3000);
-    //
-    // let doHomeWorkAlarm = function () {
-    //     alert("Time to do home work");
-    // }
-    //
-    // let timeoutId = setTimeout (doHomeWorkAlarm, 1000);
-    //==================================================================================================================
-    // let counter = 5;
-    // let printMessage = function () {
-    //     console.log("You are looking " + counter + " sec");
-    //     counter += 5;
-    // }
-    //
-    // let intervalId = setInterval(printMessage, 5000);
-    //==================================================================================================================
+    /* Task #1 */
+    // $("html").click(function (event) {
+    //     $("#heading").offset({
+    //         left: event.pageX,
+    //         top: event.pageY
+    //     });
+    // });
+
+    /* Task #2 */
     // let leftOffset = 0;
     // let topOffset = 0;
     // let moveHeading = function () {
-    //     $("#main-heading").offset({left: leftOffset, top: topOffset});
-    //     if (leftOffset < 200 && topOffset == 0){
+    //     $("#heading").offset({left: leftOffset, top: topOffset});
+    //     if (leftOffset < 200 && topOffset == 0) {
     //         leftOffset++;
-    //     } else if (leftOffset == 200 && topOffset < 200){
+    //     } else if (leftOffset == 200 && topOffset < 200) {
     //         topOffset++;
-    //     } else if (leftOffset < 201 && leftOffset > 0 && topOffset == 200){
+    //     } else if (leftOffset < 201 && leftOffset > 0 && topOffset == 200) {
     //         leftOffset--;
     //     } else topOffset--;
-    // }
-    // setInterval(moveHeading, 15);
-    //==================================================================================================================
-    // let leftOffset = 0;
-    // let topOffset = 0;
-    // let moveHeading = function () {
-    //     $("#main-heading").offset({left: leftOffset, top: topOffset});
-    //     if (leftOffset < 200 && topOffset == 0){
-    //         leftOffset++;
-    //     } else if (leftOffset == 200 && topOffset < 200){
-    //         topOffset++;
-    //     } else if (leftOffset < 201 && leftOffset > 0 && topOffset == 200){
-    //         leftOffset--;
-    //     } else topOffset--;
-    // }
+    // };
+    //
     // let stopAnimation = function () {
     //     clearInterval(intervalId);
-    // }
+    // };
     // $("h1").click(stopAnimation);
     // let intervalId = setInterval(moveHeading, 30);
-    //==================================================================================================================
+
+    /* Task 3 */
     let leftOffset = 0;
     let topOffset = 0;
     let speed = 100;
@@ -69,7 +46,7 @@
     let congratsText = "Молодець!";
 
     let moveHeading = function () {
-        $("#main-heading").offset({left: leftOffset, top: topOffset});
+        $("#heading").offset({left: leftOffset, top: topOffset});
         if (leftOffset < 200 && topOffset === 0) {
             leftOffset++;
         } else if (leftOffset === 200 && topOffset < 200) {
