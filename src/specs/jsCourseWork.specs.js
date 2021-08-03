@@ -7,6 +7,7 @@ const randomEmail = userData.getRandomEmail();
 describe('Registration on test funnel', function (){
     it('Open test page', async function () {
         await funnelPage.get();
+
         expect(await browser.getTitle()).toEqual(constants.funnelData.pageTitle);
     });
 
@@ -16,12 +17,14 @@ describe('Registration on test funnel', function (){
         await funnelPage.inputMobilePhoneField(constants.userData.mobilePhone);
         await funnelPage.inputMailField(randomEmail);
         await funnelPage.clickSubmitButton();
+
         expect(await funnelPage.popIsDisplayed());
         expect(await funnelPage.getPopUpText()).toEqual(constants.textPopup.TYPOP_UP);
     });
 
     it('Pop is displayed', async function (){
         await funnelPage.clickPopUpButton();
+
         expect(!funnelPage.popIsDisplayed()).toBe(false);
     });
 });

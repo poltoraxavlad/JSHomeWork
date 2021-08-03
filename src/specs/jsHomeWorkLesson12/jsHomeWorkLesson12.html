@@ -63,13 +63,19 @@
     };
 
     let dima = new Car(20, 20);
-    let dima1 = new Car(100, 200);
+    let dimaBro = new Car(100, 200);
 
-
-    setInterval(function () {
-        dima.moveRight(Math.random() * 5);
-        dima1.moveRight(Math.random() * 5);
-    }, 30);
+    let winner = setInterval(function() {
+        dima.moveRight(Math.random() * 2);
+        dimaBro.moveRight(Math.random() * 2);
+        if (dima.x >= 1000){
+            alert("Dima win");
+            clearInterval(winner);
+        }else if (dimaBro.x >= 1000){
+            alert("Dima Bro win");
+            clearInterval(winner);
+        };
+    });
 </script>
 </body>
 </html>
